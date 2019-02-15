@@ -7,14 +7,12 @@ You should look at this list of open APIs https://github.com/toddmotto/public-ap
 Requirements
 This is a creative project, so you are welcome to build what you would like. The basic requirements are:
 
-The site uses JavaScript and fetch to get data from an external API
-The site contains a footer that links to your public GitHub repository
-The GitHub repository should be in your own GitHub account.
+- [ ] The site uses JavaScript and fetch to get data from an external API
+- [ ] The site contains a footer that links to your public GitHub repository
+- [ ] The GitHub repository should be in your own GitHub account.
 
 Submission
 Please submit to Canvas the URL for your web server, where your code is running (e.g. on your DigitalOcean server). On this website, in a footer, you must include a link to your GitHub repository. Use a unique URL for the project, e.g. cp2.emmasmith.org.
-
-You should also enter your partner's name (if any).
 
 Rubric for Grading
 We will grade your projects based on:
@@ -26,7 +24,3 @@ TAs will assign scores in these ranges:
 90-100: Excellent presentation of data from the API, clearly follows web design principles
 80-90: Uses an external API, good effort was made, but needs work to more clearly present the data or follow web design principles
 70-80: Fulfills the minimum requirement of using an API, but does not make a strong effort to present the data clearly or follow web design principles
-
-
-# ideas
-Spotify?
