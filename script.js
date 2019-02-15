@@ -74,27 +74,8 @@ function renderSingleTrack(trackData) {
   trackHTML += '<h2>' + trackData.strTrack + '</h2>';
   trackHTML += '<h4>' + trackData.strArtist + '</h4>';
   trackHTML += '<h5>' + trackData.strAlbum + '</h5>';
-  // TODO make links to the audio DB
-  // trackHTML += "<a href='" + trackData.artist_website + "'>Website</a>";
   trackHTML += '</div>';
 
-  // "idTrend": "3262",
-  //     "intChartPlace": "6",
-  //     "idArtist": "122405",
-  //     "idAlbum": "2313452",
-  //     "idTrack": "35130889",
-  //     "strArtistMBID": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-  //     "strAlbumMBID": "485d3241-ef02-49a4-88df-a03eaa86d9cd",
-  //     "strTrackMBID": "72436ce7-c14d-48c6-9e48-c166ac4a5db4",
-  //     "strArtist": "Ariana Grande",
-  //     "strAlbum": "Thank U, Next",,
-  //     "strArtistThumb": null,
-  //     "strAlbumThumb": null,
-  //     "f": "https://www.theaudiodb.com/images/icons/upload_icon-transparent2.png",
-  //     "strCountry": "us",
-  //     "strType": "iTunes",
-  //     "intWeek": "6",
-  //     "dateAdded": "2019-02-10 01:00:02"
   return trackHTML;
 }
 
@@ -140,32 +121,8 @@ function renderSingleAlbum(albumData) {
   albumHTML += "<img class='artist-img' src='" + albumData.strArtistThumb + "' /></img>";
   albumHTML += '<h2>' + albumData.strAlbum + '</h2>';
   albumHTML += '<h4>' + albumData.strArtist + '</h4>';
-  // TODO make links to the audio DB
-  // albumHTML += "<a href='" + albumData.artist_website + "'>Website</a>";
   albumHTML += '</div>';
 
-  /*
-{
-      "idTrend": "3245",
-      "intChartPlace": "1",
-      "idArtist": "122405",
-      "idAlbum": "2310441",
-      "idTrack": null,
-      "strArtistMBID": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-      "strAlbumMBID": "b6728a22-1934-4840-92ec-096944f20e12",
-      "strTrackMBID": null,
-      "strArtist": "Ariana Grande",
-      "strAlbum": "thank u, next",
-      "strTrack": null,
-      "strArtistThumb": "https://www.theaudiodb.com/images/media/artist/thumb/tytqvq1506095485.jpg",
-      "strAlbumThumb": "https://www.theaudiodb.com/images/media/album/thumb/tsvrsv1544528326.jpg",
-      "strTrackThumb": null,
-      "strCountry": "us",
-      "strType": "iTunes",
-      "intWeek": "6",
-      "dateAdded": "2019-02-10 00:00:03"
-    }
-  */
   return albumHTML;
 }
 
