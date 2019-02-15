@@ -8,6 +8,7 @@ const COUNTRY_CODE_MAPPING = {
   us: 'United States',
   gb: 'Britain',
   de: 'Germany',
+  fr: 'France',
   it: 'Italy',
 };
 let current_country_code = 'us';
@@ -26,6 +27,7 @@ renderCountrySelect();
 
 function startLoading() {
   document.getElementById('loading').setAttribute('class', '');
+  document.getElementById('loading').innerText = 'Loading...'
   document.getElementById('results').setAttribute('class', 'loading');
   document.getElementById('mainResults').setAttribute('class', 'hidden');
 }
@@ -40,9 +42,13 @@ function startApp() {
   renderAlbums();
 }
 
+function handleError() {
+  document.getElementById('loading').innerText = 'No data is available right now for ' + COUNTRY_CODE_MAPPING[current_country_code] + '. Please try again later.';
+}
+
 function loadTrendingTracks() {
   const tracksURL =
-    'https://theaudiodb.com/api/v1/json/1/trending.php?country=us&type=itunes&format=singles&country=' +
+    'https://theaudiodb.com/api/v1/json/1/trending.php?country=' +
     current_country_code +
     '&type=itunes&format=singles';
   fetch(tracksURL)
@@ -51,6 +57,10 @@ function loadTrendingTracks() {
       return response.json();
     })
     .then(function(json) {
+      if (!json.trending) {
+        handleError();
+        return;
+      }
       trendingTracks = json.trending;
       trendingTracks.sort(function(a, b) {
         return parseInt(a.intChartPlace) - parseInt(b.intChartPlace);
@@ -89,7 +99,7 @@ function renderTracks() {
 
 function loadTrendingAlbums() {
   const albumURL =
-    'https://theaudiodb.com/api/v1/json/1/trending.php?country=us&type=itunes&format=albums&country=' +
+    'https://theaudiodb.com/api/v1/json/1/trending.php?country=' +
     current_country_code +
     '&type=itunes&format=albums';
   fetch(albumURL)
@@ -98,6 +108,10 @@ function loadTrendingAlbums() {
       return response.json();
     })
     .then(function(json) {
+      if (!json.trending) {
+        handleError();
+        return;
+      }
       trendingAlbums = json.trending;
       trendingAlbums.sort(function(a, b) {
         return parseInt(a.intChartPlace) - parseInt(b.intChartPlace);
