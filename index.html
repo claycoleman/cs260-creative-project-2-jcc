@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Global Music Top Trends | Clay Coleman</title>
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 id="mainTitle">Global Music Top&nbsp;Trends</h1>
+    <h4 id="mainSubtitle">Via TheAudioDb</h4>
+    <div id="main">
+      <div class="row inputRow">
+        <div class="col-md-6">
+          <p>
+            Care to know what music is trending in various countries across the world? Use this tool
+            to get access to the latest iTunes trend data.
+          </p>
+        </div>
+        <div class="col-md-6" id="countrySelectWrapper">
+          <select id="countrySelect"></select>
+        </div>
+      </div>
+
+      <div id="results" class="loading">
+        <div id="loading">
+          Loading...
+        </div>
+        <div id="mainResults" class="hidden">
+          <h3 id="locationName">Select a location above.</h3>
+          <p style="text-align: center; font-size: 12px;">Scroll to see more info and more results.</p>
+
+          <div id="mobile-toggle-buttons">
+            <button id="showTracks" class="active">Tracks</button>
+            <button id="showAlbums">Albums</button>
+          </div>
+
+          <div class="row">
+            <div id="trackResultsWrapper" class="col-md-6">
+              <h4 class="topTitle">Trending Tracks</h4>
+              <div id="trackResults" class="results">
+                <!-- make placeholders -->
+              </div>
+            </div>
+            <div id="albumResultsWrapper"  class="col-md-6 mobile-hidden">
+              <h4 class="topTitle">Trending Albums</h4>
+              <div id="albumResults" class="results">
+                <!-- make placeholders -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a target="_blank" href="https://github.com/claycoleman/cs260-creative-project-2-jcc"
+        >GitHub Repo</a
+      >
+    </footer>
+
+    <script text="type/javascript" src="/script.js"></script>
+  </body>
+</html>
