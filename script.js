@@ -8,7 +8,6 @@ const COUNTRY_CODE_MAPPING = {
   us: 'United States',
   gb: 'Britain',
   de: 'Germany',
-  fr: 'France',
   it: 'Italy',
 };
 let current_country_code = 'us';
