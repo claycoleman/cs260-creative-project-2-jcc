@@ -7,9 +7,9 @@ You should look at this list of open APIs https://github.com/toddmotto/public-ap
 Requirements
 This is a creative project, so you are welcome to build what you would like. The basic requirements are:
 
-- [ ] The site uses JavaScript and fetch to get data from an external API
-- [ ] The site contains a footer that links to your public GitHub repository
-- [ ] The GitHub repository should be in your own GitHub account.
+- [x] The site uses JavaScript and fetch to get data from an external API
+- [x] The site contains a footer that links to your public GitHub repository
+- [x] The GitHub repository should be in your own GitHub account.
 
 Submission
 Please submit to Canvas the URL for your web server, where your code is running (e.g. on your DigitalOcean server). On this website, in a footer, you must include a link to your GitHub repository. Use a unique URL for the project, e.g. cp2.emmasmith.org.
